@@ -6,19 +6,21 @@ import { from } from 'apollo-link';
 import { ApolloProvider } from 'react-apollo';
 import merge from 'lodash.merge';
 
-import { sentenceParts } from './resolvers';
+import { sentenceParts, question, sentenceTypes } from './resolvers';
 
 import logo from './logo.svg';
 import './App.css';
+
+console.log(question);
 const cache = new InMemoryCache()
 const stateLink = withClientState({
-  cache,
-  ...merge(sentenceParts)
+  ...merge(sentenceParts, question, sentenceTypes),
+  cache
 });
 
 console.log({
-  cache,
-  ...merge(sentenceParts)
+  ...merge(sentenceParts, question, sentenceTypes),
+  cache
 });
 
 const client = new ApolloClient({

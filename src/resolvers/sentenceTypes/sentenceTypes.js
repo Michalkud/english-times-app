@@ -1,6 +1,5 @@
 const sentenceTypes = {
   resolvers: {
-
   },
   defaults: {
     sentenceTypes: [
@@ -14,15 +13,15 @@ const sentenceTypes = {
       id: 2,
       __typename: 'SentenceType',
       title: 'Past simple negative',
-      sentencePartIds: []
+      sentencePartIds: [1, 10, 2]
     },
     {
       id: 3,
       __typename: 'SentenceType',
       title: 'Past simple question',
-      sentencePartIds: []
+      sentencePartIds: [9, 1, 2]
     }]
   }
 };
 
-export default SentenceTypes;
+export default sentenceTypes;
