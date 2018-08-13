@@ -6,6 +6,8 @@ import './styles.css';
 
 class Slider extends Component {
 
+  state={ choices: [], answer: []};
+
 
   onChange() {
 
@@ -15,32 +17,33 @@ class Slider extends Component {
     return (<Carousel afterChange={this.onChange}>
       <div>
         <Col>
-          <Row type="flex" justify="center">
+          <h1>Present simple</h1>
+          <Row style={{ marginTop: 100 }} type="flex" justify="center">
             <Col className="gutter-row" span={3}>
-              <Avatar size={128} shape="square" className="gutter-box">col-6</Avatar>
+              <Avatar size={160} shape="square" className="gutter-box"></Avatar>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Avatar size={128} shape="square" className="gutter-box">col-6</Avatar>
+              <Avatar size={160} shape="square" className="gutter-box"></Avatar>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Avatar size={128} shape="square" className="gutter-box">col-6</Avatar>
+              <Avatar size={160} shape="square" className="gutter-box"></Avatar>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Avatar size={128} shape="square" className="gutter-box">col-6</Avatar>
+              <Avatar size={160} shape="square" className="gutter-box"></Avatar>
             </Col>
           </Row>
-          <Row type="flex" justify="center">
+          <Row style={{ marginTop: 100 }} type="flex" justify="center">
             <Col className="gutter-row" span={3}>
-              <Avatar size={128} shape="square" className="gutter-box">col-6</Avatar>
+              <Avatar size={160} shape="square" className="gutter-box">col-6</Avatar>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Avatar size={128} shape="square" className="gutter-box">col-6</Avatar>
+              <Avatar size={160} shape="square" className="gutter-box">col-6</Avatar>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Avatar size={128} shape="square" className="gutter-box">col-6</Avatar>
+              <Avatar size={160} shape="square" className="gutter-box">col-6</Avatar>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Avatar size={128} shape="square" className="gutter-box">col-6</Avatar>
+              <Avatar size={160} shape="square" className="gutter-box">col-6</Avatar>
             </Col>
           </Row>
         </Col>

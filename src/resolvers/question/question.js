@@ -4,7 +4,13 @@ const question = {
   resolvers: {
     Query: {
       question: (_, data, { cache }) => {
-        const query = gql`{
+        const query = gql`query {
+            sentenceParts @client     {
+              id
+              __typename
+              symbol
+              description
+            }
             sentenceTypes @client {
               id
               __typename
@@ -13,10 +19,14 @@ const question = {
             }
           }
         `;
+        const { sentenceTypes, sentenceParts } = cache.readQuery({ query });
 
-        const previous = cache.readQuery({ query });
+        const randomSentenceType = sentenceTypes[Math.floor(Math.random()*sentenceTypes.length)];
+
+        
+        
         return {
-
+          sentenceType: randomSentenceType
         }
       }
     },
